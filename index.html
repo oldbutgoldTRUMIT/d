@@ -10,53 +10,24 @@
     <div class="container">
         <h1>Welcome to My Website</h1>
         <p>Hover over the button below to see the animation!</p>
-        <img src="deptrai.jpg" alt="Description of Image" class="responsive-image">
+        <img src="deptrai.jpg" alt="Clickable Image" class="hover-image" id="hoverImage">
     </div>
     <script src="script.js"></script>
 </body>
 </html>
 
 
-
 <style>
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+.hover-image {
+    max-width: 300px; /* Set a max width for the image */
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+    transition: transform 0.3s ease; /* Add transition for scaling */
 }
 
-.container {
-    text-align: center;
+.hover-image:hover {
+    transform: scale(1.1); /* Scale up the image on hover */
 }
 
-.hover-button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.hover-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.1);
-}
-
-</style>
+</style>    
 
 
-
-<script>
-document.getElementById('hoverButton').addEventListener('click', function() {
-    alert('Button clicked!');
-});
-
-  
-</script>
